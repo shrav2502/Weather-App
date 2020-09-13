@@ -13,7 +13,7 @@ function handleSubmit(e) {
   const li = document.createElement("li");
   li.className = "list-items";
 
-  const URL = `http://api.openweathermap.org/data/2.5/weather?q=${inputVal}&units=metric&appid=b1d95323276ee5704d1c3e21698af1cc`;
+  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&units=metric&appid=b1d95323276ee5704d1c3e21698af1cc`;
 
   fetch(URL)
     .then((res) => res.json())
@@ -23,7 +23,7 @@ function handleSubmit(e) {
 
       const list = `<h4>${inputVal}</h4>
       <p class="temp">${Math.floor(data.main.temp)}<sup>°C</sup></p>
-      <img src=http://api.openweathermap.org/img/w/${icon1}.png></img>
+      <img src=https://api.openweathermap.org/img/w/${icon1}.png></img>
       <p class="desciption">${data.weather[0].description}</p>
       `;
 
